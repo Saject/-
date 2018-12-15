@@ -1,0 +1,14 @@
+<?php
+
+$str = 'Привет! Как дела?';
+
+$marks = array_reverse(preg_split('~[^[:punct:]]+~', $str, -1, 1));
+$result = '';
+
+foreach (preg_split('~[[:punct:]]+~', $str, -1, 1) as $key => $vallue) {
+$result .= $vallue . $marks[$key];
+}
+echo $result;
+
+
+?>
